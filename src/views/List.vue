@@ -1,16 +1,22 @@
 <template>
-  <router-view/>
+  <div>
+    <router-link to="/">Назад</router-link>
+  </div>
 </template>
-
 <script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-})
-</script>
+  name: 'List',
+  data () {
+    return {}
+  }
+  // methods: {
 
+  // }
+})
+
+</script>
 <style lang="scss">
-body {
-  margin: 0;
-}
+
 </style>
