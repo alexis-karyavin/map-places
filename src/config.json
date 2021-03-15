@@ -1,3 +1,8 @@
 {
-  "keyMap": "pk.eyJ1IjoiYWxleGlzLWthcnlhdmluIiwiYSI6ImNrbWFvMXh3ZDF0a3MydXAxaG9xcWJiNDcifQ.RZne5Ut7N4oyM2bqoDW_EQ"
+  "map": {
+    "keyMap": "pk.eyJ1IjoiYWxleGlzLWthcnlhdmluIiwiYSI6ImNrbWFvMXh3ZDF0a3MydXAxaG9xcWJiNDcifQ.RZne5Ut7N4oyM2bqoDW_EQ",
+    "center": [37.62876226496542, 55.750564371779575],
+    "zoom": 10,
+    "style": "mapbox://styles/mapbox/streets-v11"
+  }
 }
