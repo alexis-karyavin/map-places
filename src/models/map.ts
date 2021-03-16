@@ -1,5 +1,5 @@
 import * as config from '../config.json'
-import mapboxgl, { Marker } from 'mapbox-gl'
+import mapboxgl, { EventData, Marker } from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
 export default class Map {
@@ -25,10 +25,14 @@ export default class Map {
     // TODO: Here we want to load a layer
     // TODO: Here we want to load/setup the popup
     })
-    // this.map.on('click', (e) => {
-    //   console.log(JSON.stringify(e.lngLat.wrap()))
-    // })
+    // this.addEventGetLgnLat()
     this.addMarkers()
+  }
+
+  private addEventGetLgnLat (): void {
+    this.map.on('click', (e: EventData) => {
+      console.log(JSON.stringify(e.lngLat))
+    })
   }
 
   private addMarkers (): void {
