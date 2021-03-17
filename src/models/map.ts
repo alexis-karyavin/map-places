@@ -1,7 +1,7 @@
 import * as config from '../config.json'
 import mapboxgl, { EventData, Marker, Popup } from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
-import data from '@/data/data'
+import { Features } from '@/models/interfaces'
 
 export default class Map {
   // TODO: Узнать интерфейс
@@ -34,14 +34,14 @@ export default class Map {
     // this.addImageMarker('custom-marker', )
   }
 
-  public addPlaces (): void {
+  public addPlaces (places: Features): void {
     // TODO: Разбить на более мелкие функции
     this.map.on('load', () => {
       this.map.addSource('places', {
         type: 'geojson',
         data: {
           type: 'FeatureCollection',
-          features: data
+          features: places
         }
       })
 
