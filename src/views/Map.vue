@@ -11,6 +11,7 @@ export default defineComponent({
   mounted (): void {
     const map = new Map()
     map.init()
+    map.addPlaces()
   }
 })
 </script>
