@@ -31,6 +31,7 @@ export default class Map {
     // this.addEventGetLgnLat()
     // this.addMarkers()
     // this.addEventMarkers()
+    // this.addImageMarker('custom-marker', )
   }
 
   public addPlaces (): void {
@@ -56,10 +57,6 @@ export default class Map {
       })
 
       this.map.on('click', 'places', (e: EventData) => {
-        // if (this.popup.isOpen()) {
-        //   this.popup.remove()
-        // }
-
         const coordinates = e.features[0].geometry.coordinates.slice()
         const description = e.features[0].properties.description
 
@@ -70,16 +67,8 @@ export default class Map {
           coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360
         }
 
-        // const { lng, lat } = coordinates.getLngLat()
-
         this.showPopup(coordinates[0], coordinates[1], description)
 
-        // new mapboxgl.Popup()
-        //   .setLngLat(coordinates)
-        //   .setHTML(description)
-        //   .addTo(this.map)
-        // eslint-disable-next-line no-debugger
-        // debugger
         this.goTo(coordinates[0], coordinates[1])
       })
 
@@ -93,6 +82,10 @@ export default class Map {
         this.map.getCanvas().style.cursor = ''
       })
     })
+  }
+
+  public addImageMarker (name: string, url: string): void {
+    this.map.loadImage(name, this.createImage(url))
   }
 
   private addEventGetLgnLat (): void {
@@ -112,7 +105,6 @@ export default class Map {
   }
 
   private addEventMarkers (): void {
-    // console.log('markers', this.markers)
     this.markers.forEach(marker => {
       const { lng, lat } = marker.getLngLat()
       marker.getElement().addEventListener('click', () => {
@@ -134,5 +126,11 @@ export default class Map {
       .setLngLat([lng, lat])
       .setHTML(description)
       .addTo(this.map)
+  }
+
+  private createImage (url: string): HTMLImageElement {
+    const image = new Image(50, 50)
+    image.src = url
+    return image
   }
 }
