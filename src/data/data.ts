@@ -3,7 +3,7 @@ export default [
     type: 'Feature',
     properties: {
       description: 'test 1',
-      icon: 'bicycle'
+      icon: 'casino'
     },
     geometry: {
       type: 'Point',
@@ -14,7 +14,7 @@ export default [
     type: 'Feature',
     properties: {
       description: 'test 2',
-      icon: 'bicycle'
+      icon: 'casino'
     },
     geometry: {
       type: 'Point',
@@ -25,7 +25,7 @@ export default [
     type: 'Feature',
     properties: {
       description: 'test 3',
-      icon: 'bicycle'
+      icon: 'casino'
     },
     geometry: {
       type: 'Point',
@@ -36,7 +36,7 @@ export default [
     type: 'Feature',
     properties: {
       description: 'test 4',
-      icon: 'bicycle'
+      icon: 'casino'
     },
     geometry: {
       type: 'Point',
