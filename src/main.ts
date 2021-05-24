@@ -5,10 +5,11 @@ import store from './store'
 import 'bootstrap'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { faUserSecret, faCircleNotch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(faUserSecret)
+library.add(faCircleNotch)
 
 createApp(App)
   .use(store)
