@@ -23,10 +23,12 @@ export default class Map {
     this.popup = new mapboxgl.Popup()
   }
 
-  public init (): void {
-    this.map.on('load', () => {
-    // TODO: Here we want to load a layer
-    // TODO: Here we want to load/setup the popup
+  public init (): Promise<string> {
+    return new Promise(resolve => {
+      this.map.on('load', () => {
+        // console.log()
+        resolve('end load')
+      })
     })
     // this.addEventGetLgnLat()
     // this.addMarkers()
