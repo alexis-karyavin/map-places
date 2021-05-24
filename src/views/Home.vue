@@ -1,24 +1,16 @@
 <template>
   <div class="main-container">
     <Map />
-    <Button icon="pi pi-bars" class="p-button-rounded btn-menu" />
-    <Button icon="pi pi-check" label="Списком" class="p-button btn-list" />
-    <!-- <button class="btn-menu">
-      <font-awesome-icon icon="user-secret" />
-    </button> -->
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-// import Menubar from 'primevue/menubar'
 import Map from '@/views/Map.vue'
-import Button from 'primevue/button'
 
 export default defineComponent({
   components: {
-    Map,
-    Button
+    Map
   },
   data () {
     return {
