@@ -1,16 +1,20 @@
 <template>
   <div class="main-container">
     <Map />
+    <ButtonMap class="btn-menu" :icon="['fa', 'bars']" />
+    <ButtonMap class="btn-list" :icon="['fa', 'list-ol']" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Map from '@/views/Map.vue'
+import ButtonMap from '@/components/buttons/ButtonMap.vue'
 
 export default defineComponent({
   components: {
-    Map
+    Map,
+    ButtonMap
   },
   data () {
     return {
@@ -33,16 +37,10 @@ body {
   .btn-menu {
     position: absolute;
     left: 1rem;
-    background: white;
-    color: black;
-    width: 50px!important;
-    height: 50px!important;
   }
   .btn-list {
     position: absolute;
     right: 1rem;
-    background: white;
-    color: black;
   }
 }
 </style>
