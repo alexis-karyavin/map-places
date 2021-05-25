@@ -23,11 +23,11 @@ export default class Map {
     this.popup = new mapboxgl.Popup()
   }
 
-  public init (): Promise<string> {
+  public init (): Promise<void> {
     return new Promise(resolve => {
       this.map.on('load', () => {
         // console.log()
-        resolve('end load')
+        resolve()
       })
     })
     // this.addEventGetLgnLat()

@@ -1,6 +1,6 @@
 <template>
   <div id="map"></div>
-  <Spinner />
+  <Spinner v-if="showSpinner" />
 </template>
 
 <script lang="ts">
@@ -13,6 +13,11 @@ export default defineComponent({
   name: 'Map',
   components: {
     Spinner
+  },
+  data () {
+    return {
+      showSpinner: true
+    }
   },
   computed: {
     ...mapGetters({
@@ -29,8 +34,9 @@ export default defineComponent({
     ]),
     initMap (): void {
       const map = new Map()
-      map.init().then(res => {
-        console.log('component:', res)
+      map.init().then(() => {
+        // console.log('component:', res)
+        this.showSpinner = false
       })
       map.addPlaces(this.places)
     }
