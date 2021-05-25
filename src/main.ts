@@ -5,11 +5,12 @@ import store from './store'
 import 'bootstrap'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBars, faListOl } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faListOl, faCircleNotch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(faBars)
 library.add(faListOl)
+library.add(faCircleNotch)
 
 createApp(App)
   .use(store)
