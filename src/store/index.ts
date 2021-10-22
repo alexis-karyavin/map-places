@@ -6,7 +6,7 @@ export default createStore({
     places: []
   },
   getters: {
-    getPlaces: state => state.places
+    // getPlaces: state => state.places
   },
   mutations: {
     SET_PLACES (state, data) {

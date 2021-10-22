@@ -1,4 +1,4 @@
-export interface Features {
+export interface Feature {
   type: string;
   properties: {
     description: string;

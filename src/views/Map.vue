@@ -7,7 +7,7 @@
 import { defineComponent } from 'vue'
 import Map from '@/models/map'
 import Spinner from '@/components/base/Spinner.vue'
-import { mapActions, mapGetters } from 'vuex'
+import { mapActions, mapState } from 'vuex'
 
 export default defineComponent({
   name: 'Map',
@@ -20,9 +20,7 @@ export default defineComponent({
     }
   },
   computed: {
-    ...mapGetters({
-      places: 'getPlaces'
-    })
+    ...mapState(['places'])
   },
   mounted (): void {
     this.setPlaces()
@@ -38,7 +36,7 @@ export default defineComponent({
         // console.log('component:', res)
         this.showSpinner = false
       })
-      map.addPlaces(this.places)
+      map.addFavorites(this.places)
     }
   }
 })

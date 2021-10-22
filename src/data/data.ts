@@ -1,9 +1,9 @@
-export default [
+const data = [
   {
     type: 'Feature',
     properties: {
       description: 'test 1',
-      icon: 'casino'
+      title: 'Club'
     },
     geometry: {
       type: 'Point',
@@ -14,7 +14,7 @@ export default [
     type: 'Feature',
     properties: {
       description: 'test 2',
-      icon: 'casino'
+      title: 'Club'
     },
     geometry: {
       type: 'Point',
@@ -25,7 +25,7 @@ export default [
     type: 'Feature',
     properties: {
       description: 'test 3',
-      icon: 'casino'
+      title: 'Club'
     },
     geometry: {
       type: 'Point',
@@ -36,7 +36,7 @@ export default [
     type: 'Feature',
     properties: {
       description: 'test 4',
-      icon: 'casino'
+      title: 'Club'
     },
     geometry: {
       type: 'Point',
@@ -44,3 +44,5 @@ export default [
     }
   }
 ]
+
+export default data
