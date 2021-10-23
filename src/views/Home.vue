@@ -1,16 +1,19 @@
 <template>
   <div class="main-container">
     <Map />
+    <MapTools />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Map from '@/views/Map.vue'
+import MapTools from '@/components/MapTools.vue'
 
 export default defineComponent({
   components: {
-    Map
+    Map,
+    MapTools
   },
   data () {
     return {

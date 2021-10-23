@@ -2,14 +2,14 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import 'bootstrap'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret, faCircleNotch } from '@fortawesome/free-solid-svg-icons'
+import { faCircleNotch, faWrench } from '@fortawesome/free-solid-svg-icons'
+import { faCompass, faStar } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faUserSecret)
-library.add(faCircleNotch)
+library.add(faCircleNotch, faWrench)
+library.add(faCompass, faStar)
 
 createApp(App)
   .use(store)
