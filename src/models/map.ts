@@ -17,7 +17,8 @@ export default class Map {
       container: 'map',
       style: config.map.style,
       center: [37.62876226496542, 55.750564371779575],
-      zoom: config.map.zoom
+      zoom: config.map.zoom,
+      attributionControl: false
     })
 
     this.markers = []

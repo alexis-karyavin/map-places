@@ -7,15 +7,9 @@
     </div>
     <div class="map-tools-group footer-menu">
       <div class="footer-menu-container">
-        <button class="btn btn-transparent btn-icon active">
-          <font-awesome-icon :icon="['far', 'compass']" size="3x" />
-        </button>
-        <button class="btn btn-transparent btn-icon">
-          <font-awesome-icon :icon="['far', 'star']" size="3x" />
-        </button>
-        <button class="btn btn-transparent btn-icon">
-          <font-awesome-icon icon="wrench" size="3x" />
-        </button>
+        <ButtonIcon :active="true" :icon="['far', 'compass']"/>
+        <ButtonIcon :active="false" :icon="['far', 'star']"/>
+        <ButtonIcon :active="false" :icon="['fa', 'wrench']"/>
       </div>
     </div>
   </div>
@@ -23,14 +17,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import ButtonIcon from '@/components/ButtonIcon.vue'
 // import userImg from '@/assets/icons/user.png'
 export default defineComponent({
-  // data () {
-  //   return {
-  //     // srcImg: userImg
-  //   }
-  // }
-
+  components: {
+    ButtonIcon
+  }
 })
 </script>
 
@@ -72,11 +64,6 @@ export default defineComponent({
           display: flex;
           align-items: center;
           justify-content: space-around;
-
-          .btn {
-            width: 38px;
-            height: 38px;
-          }
         }
       }
     }
